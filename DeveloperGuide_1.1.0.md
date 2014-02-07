@@ -41,7 +41,7 @@ SDKを利用するためには事前に[Applihelp](http://console.applihelp.com)
 SDKの構成は下記の通りです。
 
 - `Document` APIリファレンスです。
-- `SampleApplication` サンプルアプリケーションです。
+- `SampleApplication` サンプルアプリケーションです。PUSH通知の受信は行えません。
 - `SDK`
 	- `libapphelp.a` ApplihelpのStatic Libraryです。
 	- `ApplihelpSDK.h` Static Libraryのヘッダファイルです。
