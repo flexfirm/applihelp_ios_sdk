@@ -101,6 +101,10 @@ iTunes Connectで発行したアプリケーションのAppIDを指定してく�
 [ApplihelpSDK setAppId:@"Your-Application-AppID"];
 ```
 
+### RootViewControllerの設定
+Applihelpの各画面はウィンドウに対するモーダルViewとして表示されます。そのため各画面を呼出す前には必ずウインドウのrootViewControllerプロパティに値を設定してください。
+
+
 ### メイン画面表示
 Applihelpのメイン画面を表示します。
 
