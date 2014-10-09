@@ -375,11 +375,11 @@ Applihelpが使用するテーマはリソースファイル`APHResources/themes
 
 <a name="Changelogs">Changelogs</a>
 --------------------------------------------------
-- [Ver.1.3.0]Released on Oct ??, 2014
+- [Ver.1.3.0]Released on Oct 10, 2014
   - Webコンソールで設定したFAQを表示できる機能を追加しました。
 
 
-- [Ver.1.2.2]Released on Oct ??, 2014
+- [Ver.1.2.2]Released on Oct 09, 2014
   - 新着通知数取得時に応答を返さないことがある問題を修正しました。
 
 
