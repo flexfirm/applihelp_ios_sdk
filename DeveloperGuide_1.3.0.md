@@ -397,8 +397,7 @@ Applihelpが使用するテーマはリソースファイル`APHResources/themes
 
 <a name="Changelogs">Changelogs</a>
 --------------------------------------------------
-- [Ver.1.3.1]Released on Oct 10, 2014
-  - プッシュ通知に必要なデバイストークンが更新されていてもサーバに反映されない問題を修正しました。
+- [Ver.1.3.0]Released on Oct 20, 2014
   - SANDBOX環境についての説明を追記しました。
 
 
