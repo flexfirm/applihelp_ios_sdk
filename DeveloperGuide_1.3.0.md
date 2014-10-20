@@ -101,6 +101,25 @@ iTunes Connectで発行したアプリケーションのAppIDを指定してく�
 ```objc
 [ApplihelpSDK setAppId:@"Your-Application-AppID"];
 ```
+**※** "Your-Application-AppID"　は iTunes Connect の Manage Your Apps で発行される9桁の数字です。
+
+**<a name="Sandbox">SANDBOX環境を利用する場合</a>**  
+PUSH通知に開発用SSL証明書を利用する場合はSANDBOX環境を利用して下さい。
+SANDBOX環境を利用する場合は setAppId の引数 AppID　に　"-sandbox" を付与します。下記の例のようにマクロを定義してデバッグビルド、リリースビルドで切り替えます。
+
+##### 例） "Your-Application-AppID" が "999999999" の場合
+```objc
+#ifdef DEBUG
+// デバッグビルド
+[ApplihelpSDK setAppId:@"999999999-sandbox"];
+#else
+// リリースビルド
+[ApplihelpSDK setAppId:@"999999999"];
+#endif
+} 
+```
+
+**※** デバッグビルドをインストールした端末に、リリースビルドをインストールするとエラーが発生する可能性があります。そのため、一度アンインストールを行ってから再インストールしてください。
 
 ### RootViewControllerの設定
 Applihelpの各画面はウィンドウに対するモーダルViewとして表示されます。そのため各画面を呼出す前には必ずウインドウのrootViewControllerプロパティに値を設定してください。
@@ -192,6 +211,9 @@ NSString *userName = [ApplihelpSDK userName];
 
 アプリでPUSH通知を有効にするためには Apple Developer での設定が必要です。設定は以下を参考にしてください。  
 [Local および Push Notification プログラミングガイド | Apple Developer](https://developer.apple.com/jp/devcenter/ios/library/documentation/RemoteNotificationsPG.pdf)  
+
+開発用SSL証明書を利用する場合はSANDBOX用の AppID が設定されている必要があります。詳しくは以下を参考にしてください。  
+<a href="#Sandbox">SANDBOX環境を利用する場合</a>
 
 #### APNs認証
 `AppDelegate`クラスの`didFinishLaunchingWithOptions`メソッドでAPNsにデバイストークンを要求します。   **デバイストークンはAppleの仕様によりシミュレータでは取得できません。**
@@ -375,11 +397,16 @@ Applihelpが使用するテーマはリソースファイル`APHResources/themes
 
 <a name="Changelogs">Changelogs</a>
 --------------------------------------------------
+- [Ver.1.3.1]Released on Oct 10, 2014
+  - プッシュ通知に必要なデバイストークンが更新されていてもサーバに反映されない問題を修正しました。
+  - SANDBOX環境についての説明を追記しました。
+
+
 - [Ver.1.3.0]Released on Oct 10, 2014
   - Webコンソールで設定したFAQを表示できる機能を追加しました。
 
 
-- [Ver.1.2.2]Released on Oct 09, 2014
+- [Ver.1.2.2]Released on Oct 9, 2014
   - 新着通知数取得時に応答を返さないことがある問題を修正しました。
 
 
