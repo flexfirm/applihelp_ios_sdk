@@ -450,6 +450,7 @@ Applihelpが使用するテーマはリソースファイル`APHResources/themes
 
 - [Ver.1.3.0]Released on Oct 10, 2014
   - Webコンソールで設定したFAQを表示できる機能を追加しました。
+  - ネックネーム入力画面とお問い合わせ画面を統合しました。
 
 
 - [Ver.1.2.2]Released on Oct 9, 2014
